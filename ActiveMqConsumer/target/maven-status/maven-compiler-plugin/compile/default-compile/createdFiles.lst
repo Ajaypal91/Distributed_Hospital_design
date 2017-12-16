@@ -1,0 +1,6 @@
+com/dc/EmailConsumer$1.class
+com/dc/EmailConsumer.class
+com/dc/Patient.class
+com/dc/AnalyticsConsumer.class
+com/dc/ActiveMqMessage.class
+com/dc/ApplicationMailer.class

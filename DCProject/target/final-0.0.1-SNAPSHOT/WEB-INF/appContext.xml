@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+	   xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:camel="http://camel.apache.org/schema/spring"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:cxf="http://camel.apache.org/schema/cxf"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://camel.apache.org/schema/spring 
+						   http://camel.apache.org/schema/spring/camel-spring.xsd 
+						   http://camel.apache.org/schema/cxf 
+						   http://camel.apache.org/schema/cxf/camel-cxf-2.8.3.xsd">
+						   
+	
+	<camel:camelContext id="camel-client">
+        <camel:template id="camelTemplate" />
+    </camel:camelContext>
+
+    <bean id="qmanager" class="org.apache.activemq.camel.component.ActiveMQComponent">
+        <property name="brokerURL" value="tcp://localhost:61616" />
+    </bean>   
+	
+</beans>

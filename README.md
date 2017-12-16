@@ -12,8 +12,7 @@ This repository contains all the files required to change the HappyPatients hosp
 1 Java 1.8</br>
 2 Cassandra 2.x </br>
 3 ActiveMq </br>
-4 HazelCast</br>
-
+4 HazelCast</br></br>
 
 
 The different components used in this project include <br>
@@ -29,7 +28,7 @@ The different components used in this project include <br>
 
 The redesign of the HappyPatients hospital has the following architecture: <br>
 
-![alt text](https://github.com/svishrut93/Distributed-computing/blob/master/Happy%20Hospital%20Project/Architecture/architecture.PNG)
+![alt text](Architecture/architecture.PNG)
 
 
 Some things to note before running the application is that the cassandra version used for this project is 2.2 and using the 3.x release might lead to unexpected behavior.<br> 
@@ -41,7 +40,7 @@ The RESTful webservice is built using SPRING and the database is connected using
 
 To execute this part of the project run perform <i>maven clean install</i> and copy the war file in the webapps folder of tomcat server. Make RESTful API calls using postman<br>
 
-![alt text](https://github.com/svishrut93/Distributed-computing/blob/master/Happy%20Hospital%20Project/Architecture/DC%20structure.PNG)
+![alt text](Architecture/DC%20structure.PNG)
 
 To execute the policy server run the file PolicyController.java inside PolicyServer-->src-->main-->java-->com-->java-->controller <br>
 
@@ -53,7 +52,7 @@ WAR files are not included in the repository because of their large size(>50MB),
 Below is the schema used for cassandra database <br> 
 keyspace name = hospital<br>
 table name = patient<br>
-![alt text](https://github.com/svishrut93/Distributed-computing/blob/master/Happy%20Hospital%20Project/Architecture/Schema.png)
+![alt text](Architecture/Schema.png)
 
 The folder :ActiveMQConsumer contains all java files to perform 2 actions : Send Email and Analytics. 
 Every time an action is performed on the database a message is sent to the 2 queues and corresponding actions are performed. 
